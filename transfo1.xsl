@@ -5,6 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <title>Transformation 1</title>
 </head>
 <body>
     <h2>Liste des employes et leurs attributs</h2>
