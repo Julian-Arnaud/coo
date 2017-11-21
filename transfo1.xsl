@@ -8,14 +8,14 @@
     <title>Transformation 1</title>
 </head>
 <body>
-    <h2>Liste des employes et leurs attributs</h2>
-    <table>
+    <p>Liste des employes et de leurs informations</p>
+    <table border="1">
         <tr>
-            <th>id</th>
-            <th>nom</th>
-            <th>prenom</th>
-            <th>adresse</th>
-            <th>salaire</th>
+            <th>Identifiant</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Adresse</th>
+            <th>Salaire</th>
         </tr>
     <xsl:for-each select="employes/employe">
         <tr>
@@ -24,6 +24,24 @@
             <td><xsl:value-of select="@prenom_e"/></td>
             <td><xsl:value-of select="@adresse_e"/></td>
             <td><xsl:value-of select="@salaire"/></td>
+        </tr>
+    </xsl:for-each>
+    </table>
+    
+    <p>Liste des employes et de leurs informations</p>
+    <table border="1">
+        <tr>
+            <th>Indentifiant</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Adresse</th>
+        </tr>
+    <xsl:for-each select="clients/client">
+        <tr>
+            <td><xsl:value-of select="@id_c"/></td>
+            <td><xsl:value-of select="@nom_c"/></td>
+            <td><xsl:value-of select="@prenom_c"/></td>
+            <td><xsl:value-of select="@adresse_c"/></td>
         </tr>
     </xsl:for-each>
     </table>
