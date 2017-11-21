@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transfo3.xsl"?>
+<assurance>
+
+    <!-- Tous les employes -->
+    <employes>
+        <employe id_e="1" nom_e="Pierre" prenom_e="Paul" adresse_e="sqdfs" date_e="1984-11-04" salaire="3000">
+            <contrat_ref ref="1"/>
+            <contrat_ref ref="3"/>
+            <contrat_ref ref="6"/>
+        </employe>
+        <employe id_e="2" nom_e="Jacques" prenom_e="Martin" adresse_e="dsfsrgsrg" date_e="1991-07-28" salaire="2700">
+            <contrat_ref ref="2"/>
+            <contrat_ref ref="4"/>
+            <contrat_ref ref="5"/>
+            <contrat_ref ref="7"/>
+        </employe>
+    </employes>
+    
+    <!-- Tous les clients de l'entreprise -->    
+    <clients>
+        <client id_c="1" nom_c="a" prenom_c="s" adresse_c="lsf">
+            <contrat_ref ref="1"/>
+            <contrat_ref ref="4"/>
+        </client>
+        <client id_c="2" nom_c="b" prenom_c="d" adresse_c="qazqsd">
+            <contrat_ref ref="2"/>
+            <contrat_ref ref="3"/>
+            <contrat_ref ref="5"/>
+        </client>
+        <client id_c="3" nom_c="c" prenom_c="f" adresse_c="fdsq">
+            <contrat_ref ref="6"/>
+            <contrat_ref ref="7"/>
+        </client>
+    </clients>
+    <!-- Tous les contrats existants -->
+    <contrats>
+        <contrat ref="1" id_c="1" id_e="1" type="AUTO">
+            <cotisation>2000</cotisation>
+            <indemnites>35000</indemnites>
+            <sinistres>
+                <sinistre>Panne</sinistre>
+                <sinistre>Bris de glace</sinistre>
+            </sinistres>
+        </contrat>
+        <contrat ref="2" id_c="2" id_e="2" type="HABITATION">
+            <cotisation>2600</cotisation>
+            <indemnites>75000</indemnites>
+            <sinistres>
+                <sinistre>Cambriolage</sinistre>
+                <sinistre>Incendie</sinistre>
+            </sinistres>
+        </contrat>
+        <contrat ref="3" id_c="2" id_e="1" type="AUTO">
+            <cotisation>800</cotisation>
+            <indemnites>22500</indemnites>
+            <sinistres>
+                <sinistre>Crevaison</sinistre>
+            </sinistres>
+        </contrat>
+        <contrat ref="4" id_c="1" id_e="2" type="DECES">
+            <cotisation>4300</cotisation>
+            <indemnites>145000</indemnites>
+            <sinistres>
+                <sinistre>Mort au travail</sinistre>
+            </sinistres>
+        </contrat>
+        <contrat ref="5" id_c="2" id_e="2" type="HABITATION">
+            <cotisation>1200</cotisation>
+            <indemnites>37500</indemnites>
+            <sinistres>
+                <sinistre>Degats des eaux</sinistre>
+                <sinistre>Electricite</sinistre>
+            </sinistres>
+        </contrat>
+        <contrat ref="6" id_c="3" id_e="1" type="RESPONSABILITE CIVILE">
+            <cotisation>1200</cotisation>
+            <indemnites>37500</indemnites>
+            <sinistres>
+                <sinistre>Coups et blessures</sinistre>
+            </sinistres>
+        </contrat>
+        <contrat ref="7" id_c="3" id_e="2" type="AUTO">
+            <cotisation>1200</cotisation>
+            <indemnites>37500</indemnites>
+            <sinistres>
+                <sinistre>Tout risques</sinistre>
+            </sinistres>
+        </contrat>
+    </contrats>
+</assurance>

@@ -1,0 +1,84 @@
+
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="assurance" type="assuranceType"/>
+  <xs:complexType name="contrat_refType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="ref" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="employeType">
+    <xs:sequence>
+      <xs:element type="contrat_refType" name="contrat_ref" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="id_e" use="optional"/>
+    <xs:attribute type="xs:string" name="nom_e" use="optional"/>
+    <xs:attribute type="xs:string" name="prenom_e" use="optional"/>
+    <xs:attribute type="xs:string" name="adresse_e" use="optional"/>
+    <xs:attribute type="xs:date" name="date_e" use="optional"/>
+    <xs:attribute type="xs:short" name="salaire" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="employesType">
+    <xs:sequence>
+      <xs:element type="employeType" name="employe" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clientType">
+    <xs:sequence>
+      <xs:element type="contrat_refType" name="contrat_ref" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="id_c" use="optional"/>
+    <xs:attribute type="xs:string" name="nom_c" use="optional"/>
+    <xs:attribute type="xs:string" name="prenom_c" use="optional"/>
+    <xs:attribute type="xs:string" name="adresse_c" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="clientsType">
+    <xs:sequence>
+      <xs:element type="clientType" name="client" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sinistresType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="sinistre" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contratType">
+    <xs:sequence>
+      <xs:element type="xs:short" name="cotisation"/>
+      <xs:element type="xs:int" name="indemnites"/>
+      <xs:element type="sinistresType" name="sinistres"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="ref" use="optional"/>
+    <xs:attribute type="xs:byte" name="id_c" use="optional"/>
+    <xs:attribute type="xs:byte" name="id_e" use="optional"/>
+    <xs:attribute type="xs:string" name="type" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="contratsType">
+    <xs:sequence>
+      <xs:element type="contratType" name="contrat" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="assuranceType">
+    <xs:sequence>
+      <xs:element type="employesType" name="employes">
+        <xs:annotation>
+          <xs:documentation>Tous les employes</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="clientsType" name="clients">
+        <xs:annotation>
+          <xs:documentation>Tous les clients de l'entreprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="contratsType" name="contrats">
+        <xs:annotation>
+          <xs:documentation>Tous les contrats existants</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
+
