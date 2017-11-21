@@ -8,16 +8,15 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Transformation 2</title>
+    <link rel="stylesheet" type="text/css" href="theme.css" />
 </head>
-
 <body>
-<h2>Liste des contrats dont s'occupent chaque employé.</h2>
+<h2>Liste des contrats dont s'occuppent chaque employé.</h2>
 <xsl:for-each select="employes/employe">
     <xsl:variable name="id" select="@id_e"/>
     <p><xsl:value-of select="@nom_e"/></p>
     <ul>
     <xsl:for-each select="/assurance/contrats/contrat">
-    
         <xsl:if test="@id_e = $id">
             <li><xsl:value-of select="@type"/></li>
         </xsl:if>

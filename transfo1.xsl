@@ -6,10 +6,11 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Transformation 1</title>
+    <link rel="stylesheet" type="text/css" href="theme.css" />
 </head>
 <body>
-    <p>Liste des employes et de leurs informations</p>
-    <table border="1">
+    <h2>Liste des employes et de leurs informations</h2>
+    <table class="table_container" border="1">
         <tr>
             <th>Identifiant</th>
             <th>Nom</th>
@@ -28,8 +29,8 @@
     </xsl:for-each>
     </table>
     
-    <p>Liste des employes et de leurs informations</p>
-    <table border="1">
+    <h2>Liste des clients et de leurs informations</h2>
+    <table class="table_container" border="1">
         <tr>
             <th>Indentifiant</th>
             <th>Nom</th>
