@@ -6,12 +6,8 @@
     <html>
         <body>
         Les contrats de chaque client
-            <table>
-                <tr>
-                    <th>Nom client</th>
-                    <th>Prenom client</th>
+            <table border="1">
                     <xsl:apply-templates select="assurance/clients/client" />
-                </tr>
             </table>
         </body>
     </html>
@@ -32,11 +28,20 @@
 
     <xsl:param name="id"/>
         <xsl:if test="@id_c = $id">
-        <ul>
-        <li><xsl:value-of select="@type" /></li>
-        <li><xsl:value-of select="cotisation" /></li>
-        <li><xsl:value-of select="indemnites" /></li>
-        </ul>
+        <tr>
+        <table border="1">
+            <tr>
+                <th>Nom du contrat</th>
+                <th>Cotisation</th>
+                <th>Indemnites</th>
+            </tr>
+            <tr>
+                <td><xsl:value-of select="@type" /></td>
+                <td><xsl:value-of select="cotisation" /></td>
+                <td><xsl:value-of select="indemnites" /></td>
+            </tr>
+        </table>
+        </tr>
     </xsl:if>
  
 </xsl:template>
