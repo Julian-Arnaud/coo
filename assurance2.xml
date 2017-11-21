@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="transfo3.xsl"?>
+<?xml-stylesheet type="text/xsl" href="transfo2.xsl"?>
 <assurance>
 
     <!-- Tous les employes -->
     <employes>
-        <employe id_e="1" nom_e="Pierre" prenom_e="Paul" adresse_e="sqdfs" date_e="1984-11-04" salaire="3000">
+        <employe id_e="1" nom_e="Pierre" prenom_e="Paul" adresse_e="78 Avenue Large 21050 Dijon" date_e="1984-11-04" salaire="3000">
             <contrat_ref ref="1"/>
             <contrat_ref ref="3"/>
             <contrat_ref ref="6"/>
         </employe>
-        <employe id_e="2" nom_e="Jacques" prenom_e="Martin" adresse_e="dsfsrgsrg" date_e="1991-07-28" salaire="2700">
+        <employe id_e="2" nom_e="Jacques" prenom_e="Martin" adresse_e="8 Impasse des Rochers 08000 Charleville Mezieres" date_e="1991-07-28" salaire="2700">
             <contrat_ref ref="2"/>
             <contrat_ref ref="4"/>
             <contrat_ref ref="5"/>
             <contrat_ref ref="7"/>
         </employe>
+        <employe id_e="3" nom_e="Gabrielle" prenom_e="Duret" adresse_e="99 Rue de la Fin, 99999 Sens-Interdit" date_e="2017-01-14" salaire="2000">
+            <contrat_ref ref="8"/>
+            <contrat_ref ref="9"/>
+        </employe>
     </employes>
     
     <!-- Tous les clients de l'entreprise -->    
     <clients>
-        <client id_c="1" nom_c="a" prenom_c="s" adresse_c="lsf">
+        <client id_c="1" nom_c="Gilbert" prenom_c="Montagne" adresse_c="45 Rue des Pins 06410 Biot">
             <contrat_ref ref="1"/>
             <contrat_ref ref="4"/>
+            <contrat_ref ref="9"/>
         </client>
-        <client id_c="2" nom_c="b" prenom_c="d" adresse_c="qazqsd">
+        <client id_c="2" nom_c="Bernard" prenom_c="Petit" adresse_c="52 Boulevard des Templiers 73000 Chambéry">
             <contrat_ref ref="2"/>
             <contrat_ref ref="3"/>
             <contrat_ref ref="5"/>
+            <contrat_ref ref="8"/>
         </client>
-        <client id_c="3" nom_c="c" prenom_c="f" adresse_c="fdsq">
+        <client id_c="3" nom_c="Camille" prenom_c="de France" adresse_c="09020 Lieu-Dit la Chambre">
             <contrat_ref ref="6"/>
             <contrat_ref ref="7"/>
         </client>
@@ -74,17 +80,31 @@
             </sinistres>
         </contrat>
         <contrat ref="6" id_c="3" id_e="1" type="RESPONSABILITE CIVILE">
-            <cotisation>1200</cotisation>
-            <indemnites>37500</indemnites>
+            <cotisation>850</cotisation>
+            <indemnites>2850</indemnites>
             <sinistres>
                 <sinistre>Coups et blessures</sinistre>
             </sinistres>
         </contrat>
         <contrat ref="7" id_c="3" id_e="2" type="AUTO">
-            <cotisation>1200</cotisation>
-            <indemnites>37500</indemnites>
+            <cotisation>1300</cotisation>
+            <indemnites>3900</indemnites>
             <sinistres>
                 <sinistre>Tout risques</sinistre>
+            </sinistres>
+        </contrat>
+        <contrat ref="8" id_c="2" id_e="3" type="RESPONSABILITE CIVILE">
+            <cotisation>1000</cotisation>
+            <indemnites>29520</indemnites>
+            <sinistres>
+                <sinistre>Coups et blessures</sinistre>
+            </sinistres>
+        </contrat>
+        <contrat ref="9" id_c="1" id_e="3" type="HABITATION">
+            <cotisation>600</cotisation>
+            <indemnites>20000</indemnites>
+            <sinistres>
+                <sinistre>Degats des eaux</sinistre>
             </sinistres>
         </contrat>
     </contrats>
