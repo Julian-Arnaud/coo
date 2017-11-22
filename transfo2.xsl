@@ -32,24 +32,20 @@
 <p>Le salaire minimum est de:</p><xsl:value-of select="$min"/>€
 <p>Le salaire maximum est de:</p><xsl:value-of select="$max"/>€
 
-<!-- Afficher moyenne des salaires OK-->
-<xsl:for-each select="employes">
-    <p>Le salaire moyen est de: </p><xsl:value-of select="round(sum(employe/@salaire) div count(employe))"/>€
-</xsl:for-each>
+<!-- Afficher moyenne des salaires -->
+<xsl:apply-templates select="/assurance/employes"/>
 
 <!-- Afficher le nombre moyen de clients par employe -->
-<xsl:for-each select="employes/employe">
-    <p>L'employé <xsl:value-of select="@nom_e"/>&#160;<xsl:value-of select="@prenom_e"/> gère <xsl:value-of select="count(contrat_ref)"/> contrats</p>
-</xsl:for-each>
+<xsl:apply-templates select="/assurance/employes/employe"/>
 
-<!-- Afficher cotisation et indemnites moyennes pour chaque client -->
+<!-- Afficher cotisation moyenne pour chaque client -->
 
 <xsl:for-each select="clients/client">
 <xsl:variable name="id_c" select="@id_c"/>
     <p><xsl:value-of select="@nom_c"/>&#160;<xsl:value-of select="@prenom_c"/></p>
     <xsl:for-each select="/assurance/contrats/contrat">
     <xsl:if test="@id_c = $id_c">
-        <p><xsl:value-of select="sum(cotisation)"/></p>
+            <p><xsl:value-of select="sum(cotisation)"/>€</p>
     </xsl:if>
     </xsl:for-each>
 </xsl:for-each>
@@ -58,6 +54,12 @@
 </html>
 </xsl:template>
 
+<xsl:template match="/assurance/employes">
+    <p>Le salaire moyen est de: </p><xsl:value-of select="round(sum(employe/@salaire) div count(employe))"/>€
+</xsl:template>
 
+<xsl:template match="/assurance/employes/employe">
+    <p>L'employé <xsl:value-of select="@nom_e"/>&#160;<xsl:value-of select="@prenom_e"/> gère <xsl:value-of select="count(contrat_ref)"/> contrats</p>
+</xsl:template>
 
 </xsl:stylesheet>

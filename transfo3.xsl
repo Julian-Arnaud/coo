@@ -23,7 +23,7 @@
     <tr>
         <td><xsl:value-of select="@nom_c"/>
             <xsl:text> </xsl:text><xsl:value-of select="@prenom_c"/></td>
-        <xsl:apply-templates select="/assurance/contrats/contrat">
+            <xsl:apply-templates select="/assurance/contrats/contrat">
             <xsl:with-param name="id" select="$id"/>
         </xsl:apply-templates>
     </tr>
