@@ -32,7 +32,7 @@
         <xsl:apply-templates select="/assurance/clients/client"/>
     </table>
     
-    <h2>Liste des contrats et des cotisations, indemnités et sinistres</h2>
+    <h2>Liste des contrats, des cotisations et des indemnités</h2>
     <table class="table_container" border="1">
         <tr>
             <th>Type de contrat</th>
