@@ -1,49 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+<!-- 
+    Pour chaque employé de l'assurance, affiche la liste des contrats dont il s'occupe
+ -->
 <xsl:template match="/assurance">
 <html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Transformation 2</title>
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+</head>
 <body>
-<!-- Salaire minimum -->
-<xsl:variable name="min">
+<h2>Liste des contrats dont s'occuppent chaque employé.</h2>
 <xsl:for-each select="employes/employe">
-<xsl:sort select="@salaire" order="ascending"/>
-    <xsl:if test="position() = 1">
-        <xsl:value-of select="@salaire"/>
-    </xsl:if>
+    <xsl:variable name="id" select="@id_e"/>
+    <p><xsl:value-of select="@nom_e"/></p>
+    <ul>
+    <xsl:for-each select="/assurance/contrats/contrat">
+        <xsl:if test="@id_e = $id">
+            <li><xsl:value-of select="@type"/></li>
+        </xsl:if>
+    </xsl:for-each>
+    </ul>
 </xsl:for-each>
-</xsl:variable>
-
-<!-- Salaire maximum -->
-<xsl:variable name="max">
-<xsl:for-each select="employes/employe">
-<xsl:sort select="@salaire" order="descending"/>
-    <xsl:if test="position() = 1">
-        <xsl:value-of select="@salaire"/>
-    </xsl:if>
-</xsl:for-each>
-</xsl:variable>
-
-<p>Le salaire minimum est de:</p><xsl:value-of select="$min"/>€
-<p>Le salaire maximum est de:</p><xsl:value-of select="$max"/>€
-
-<!-- Afficher moyenne des salaires OK-->
-<xsl:for-each select="employes">
-    <p>Le salaire moyen est de: </p><xsl:value-of select="round(sum(employe/@salaire) div count(employe))"/>€
-</xsl:for-each>
-
-<!-- Afficher le nombre moyen de clients par employe -->
-<xsl:for-each select="employes/employe">
-    <p>L'employé <xsl:value-of select="@nom_e"/>&#160;<xsl:value-of select="@prenom_e"/> gère <xsl:value-of select="count(contrat_ref)"/> contrats</p>
-</xsl:for-each>
-
-<!-- Afficher cotisation et indemnites moyennes pour chaque client -->
-
-
-</body>
-</html>
+</body></html>
 </xsl:template>
-
-
-
 </xsl:stylesheet>
