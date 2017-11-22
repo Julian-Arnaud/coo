@@ -40,6 +40,7 @@
 
 .stat {
     padding : 5px;
+    margin: 3px;
     border-radius : 3px;
     background : #afd1c5;
     font-weight: bold;
