@@ -38,14 +38,14 @@
 <!-- Afficher le nombre moyen de clients par employe -->
 <xsl:apply-templates select="/assurance/employes/employe"/>
 
-<!-- Afficher cotisation moyenne pour chaque client -->
+<!-- Afficher cotisation pour chaque client -->
 
 <xsl:for-each select="clients/client">
 <xsl:variable name="id_c" select="@id_c"/>
     <p><xsl:value-of select="@nom_c"/>&#160;<xsl:value-of select="@prenom_c"/></p>
     <xsl:for-each select="/assurance/contrats/contrat">
     <xsl:if test="@id_c = $id_c">
-            <p><xsl:value-of select="sum(cotisation)"/>€</p>
+            <p><xsl:value-of select="cotisation"/>€</p>
     </xsl:if>
     </xsl:for-each>
 </xsl:for-each>
