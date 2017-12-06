@@ -163,5 +163,5 @@
     <car:cotisation>600</car:cotisation>
     <car:indemnites>20000</car:indemnites>
     <sinis:type>Degats des eaux</sinis:type>
-
+</type:Contrat>
 </rdf:RDF>
