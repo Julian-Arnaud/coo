@@ -50,7 +50,7 @@
     <link:ref>1</link:ref>
     <link:ref>4</link:ref>
     <link:ref>9</link:ref>
-</type>
+</type:Client>
 
 <type:Client>
     <car:id>2</car:id>
@@ -78,7 +78,7 @@
     <link:Employe>1</link:Employe>
     <car:type>AUTO</car:type>
     <car:cotisation>2000</car:cotisation>
-    <car:indemnites>35000</car:indeminites>
+    <car:indemnites>35000</car:indemnites>
     <sinis:type>Panne</sinis:type>
     <sinis:type>Bris de Glace</sinis:type>
 </type:Contrat>
@@ -89,7 +89,7 @@
     <link:Employe>2</link:Employe>
     <car:type>HABITATION</car:type>
     <car:cotisation>2600</car:cotisation>
-    <car:indemnites>75000</car:indeminites>
+    <car:indemnites>75000</car:indemnites>
     <sinis:type>Cambriolage</sinis:type>
     <sinis:type>Incendie</sinis:type>
 </type:Contrat>
@@ -100,7 +100,7 @@
     <link:Employe>1</link:Employe>
     <car:type>AUTO</car:type>
     <car:cotisation>800</car:cotisation>
-    <car:indemnites>22500</car:indeminites>
+    <car:indemnites>22500</car:indemnites>
     <sinis:type>Crevaison</sinis:type>
 </type:Contrat>
 
@@ -110,7 +110,7 @@
     <link:Employe>2</link:Employe>
     <car:type>DECES</car:type>
     <car:cotisation>4300</car:cotisation>
-    <car:indemnites>145000</car:indeminites>
+    <car:indemnites>145000</car:indemnites>
     <sinis:type>Mort au travail</sinis:type>
 </type:Contrat>
 
@@ -120,7 +120,7 @@
     <link:Employe>2</link:Employe>
     <car:type>HABITATION</car:type>
     <car:cotisation>1200</car:cotisation>
-    <car:indemnites>37500</car:indeminites>
+    <car:indemnites>37500</car:indemnites>
     <sinis:type>Degats des eaux</sinis:type>
     <sinis:type>Electricite</sinis:type>
 </type:Contrat>
@@ -131,7 +131,7 @@
     <link:Employe>1</link:Employe>
     <car:type>RESPONSABILITE CIVILE</car:type>
     <car:cotisation>850</car:cotisation>
-    <car:indemnites>2850</car:indeminites>
+    <car:indemnites>2850</car:indemnites>
     <sinis:type>Coups et blessures</sinis:type>
 </type:Contrat>
 
@@ -141,7 +141,7 @@
     <link:Employe>2</link:Employe>
     <car:type>AUTO</car:type>
     <car:cotisation>1300</car:cotisation>
-    <car:indemnites>3900</car:indeminites>
+    <car:indemnites>3900</car:indemnites>
     <sinis:type>Tout risques</sinis:type>
 </type:Contrat>
 
@@ -151,7 +151,7 @@
     <link:Employe>3</link:Employe>
     <car:type>RESPONSABILITE CIVILE</car:type>
     <car:cotisation>1000</car:cotisation>
-    <car:indemnites>29520</car:indeminites>
+    <car:indemnites>29520</car:indemnites>
     <sinis:type>Coups et blessures</sinis:type>
 </type:Contrat>
 
@@ -161,7 +161,7 @@
     <link:Employe>3</link:Employe>
     <car:type>HABITATION</car:type>
     <car:cotisation>600</car:cotisation>
-    <car:indemnites>20000</car:indeminites>
+    <car:indemnites>20000</car:indemnites>
     <sinis:type>Degats des eaux</sinis:type>
 
 </rdf:RDF>
