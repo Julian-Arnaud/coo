@@ -11,7 +11,7 @@
     <car:nom>Pierre</car:nom>
     <car:prenom>Paul</car:prenom>
     <car:adresse>78 Avenue Large 21050 Dijon</car:adresse>
-    <car:date_embauche>1984-11-04</car:date_embauche>
+    <car:dateEmbauche>1984-11-04</car:dateEmbauche>
     <car:salaire>3000</car:salaire>
     <link:ref>1</link:ref>
     <link:ref>3</link:ref>
@@ -23,7 +23,7 @@
     <car:nom>Martin</car:nom>
     <car:prenom>Jacques</car:prenom>
     <car:adresse>8 Impasse des Rochers 08000 Charleville Mezieres</car:adresse>
-    <car:date_embauche>1991-07-28</car:date_embauche>
+    <car:dateEmbauche>1991-07-28</car:dateEmbauche>
     <car:salaire>2700</car:salaire>
     <link:ref>2</link:ref>
     <link:ref>4</link:ref>
@@ -36,7 +36,7 @@
     <car:nom>Duret</car:nom>
     <car:prenom>Gabrielle</car:prenom>
     <car:adresse>99 Rue de la Fin, 99999 Sens-Interdit</car:adresse>
-    <car:date_embauche>2017-01-14</car:date_embauche>
+    <car:dateEmbauche>2017-01-14</car:dateEmbauche>
     <car:salaire>2000</car:salaire>
     <link:ref>8</link:ref>
     <link:ref>9</link:ref>
