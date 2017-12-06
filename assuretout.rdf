@@ -6,39 +6,51 @@
 @prefix link:   <http://www.assurance.org/link/#> .
 @prefix sinis:  <htpp://www.assurance.org/sinistre/#> .
 
-<#Paul>
+<#Employe1>
     rdf:type                type:Employe;
+    car:nom                 "Pierre";
+    car:prenom              "Paul";
     car:adresse             "78 Avenue Large 21050 Dijon";
     car:dateEmbauche        "1984-11-04";
     car:salaire             "3000";
     link:EstResponsableDe   <#Contrat1>,<#Contrat3>,<#Contrat6>;
 
-<#Martin>
+<#Employe2>
     rdf:type                type:Employe;
+    car:nom                 "Martin";
+    car:prenom              "Jacques";
     car:adresse             "8 Impasse des Rochers 08000 Charleville Mezieres";
     car:dateEmbauche        "1991-07-28";
     car:salaire             "2700";
     link:EstResponsableDe   <#Contrat2>,<#Contrat4>,<#Contrat5>,<#Contrat7>;
 
-<#Gabrielle>
+<#Employe3>
     rdf:type                type:Employe;
+    car:nom                 "Duret";
+    car:prenom              "Gabrielle";
     car:adresse             "99 Rue de la Fin, 99999 Sens-Interdit";
     car:dateEmbauche        "2017-01-14";
     car:salaire             "2000";
     link:EstResponsableDe   <#Contrat8>,<#Contrat9>;
 
-<#Gilbert>
+<#Client1>
     rdf:type                type:Client;
+    car:nom                 "Montagne";
+    car:prenom              "Gilbert";
     car:adresse             "45 Rue des Pins 06410 Biot";
     link:BeneficiaireDe     <#Contrat1>,<#Contrat4>,<#Contrat9>;
 
-<#Bernard>
+<#Client2>
     rdf:type                type:Client;
+    car:nom                 "Petit";
+    car:prenom              "Bernard";
     car:adresse             "52 Boulevard des Templiers 73000 Chambéry";
     link:BeneficiaireDe     <#Contrat2>,<#Contrat3>,<#Contrat5>,<#Contrat8>;
 
-<#Camille>
+<#Client3>
     rdf:type                type:Client;
+    car:nom                 "de France";
+    car:prenom              "Camille";
     car:adresse             "09020 Lieu-Dit la Chambre";
     link:BeneficiaireDe     <#Contrat6>,<#Contrat7>;
 
@@ -47,8 +59,8 @@
     car:type                "AUTO";
     car:cotisation          "2000";
     car:indemnites          "35000";
-    link:GerePar            <#Paul>;
-    link:PossedePar         <#Gilbert>;
+    link:GerePar            <#Employe1>;
+    link:PossedePar         <#Client1>;
     sinis:type              "Panne","Bris de glace";
 
 <#Contrat2>
@@ -56,8 +68,8 @@
     car:type                "HABITATION";
     car:cotisation          "2600";
     car:indemnites          "75000";
-    link:GerePar            <#Martin>;
-    link:PossedePar         <#Bernard>;
+    link:GerePar            <#Employe2>;
+    link:PossedePar         <#Client2>;
     sinis:type              "Cambriolage","Incendie";
 
 <#Contrat3>
@@ -65,8 +77,8 @@
     car:type                "AUTO";
     car:cotisation          "800";
     car:indemnites          "22500";
-    link:GerePar            <#Paul>;
-    link:PossedePar         <#Bernard>;
+    link:GerePar            <#Employe1>;
+    link:PossedePar         <#Client2>;
     sinis:type              "Crevaison";
 
 <#Contrat4>
@@ -74,8 +86,8 @@
     car:type                "DECES";
     car:cotisation          "4300";
     car:indemnites          "145000";
-    link:GerePar            <#Martin>;
-    link:PossedePar         <#Gilbert>;
+    link:GerePar            <#Employe2>;
+    link:PossedePar         <#Client1>;
     sinis:type              "Mort au travail";
 
 <#Contrat5>
@@ -83,8 +95,8 @@
     car:type                "HABITATION";
     car:cotisation          "1200";
     car:indemnites          "37500";
-    link:GerePar            <#Martin>;
-    link:PossedePar         <#Bernard>;
+    link:GerePar            <#Employe2>;
+    link:PossedePar         <#Client2>;
     sinis:type              "Degats des eaux","Electricite";
 
 <#Contrat6>
@@ -92,8 +104,8 @@
     car:type                "RESPONSABILITE CIVILE";
     car:cotisation          "850";
     car:indemnites          "2850";
-    link:GerePar            <#Paul>;
-    link:PossedePar         <#Camille>;
+    link:GerePar            <#Employe1>;
+    link:PossedePar         <#Client3>;
     sinis:type              "Coups et blessure";
 
 <#Contrat7>
@@ -101,8 +113,8 @@
     car:type                "AUTO";
     car:cotisation          "1300";
     car:indemnites          "3900";
-    link:GerePar            <#Martin>;
-    link:PossedePar         <#Camille>;
+    link:GerePar            <#Employe2>;
+    link:PossedePar         <#Client3>;
     sinis:type              "Tout risques";
 
 <#Contrat8>
@@ -110,8 +122,8 @@
     car:type                "RESPONSABILITE CIVILE";
     car:cotisation          "1000";
     car:indemnites          "29520";
-    link:GerePar            <#Gabrielle>;
-    link:PossedePar         <#Bernard>;
+    link:GerePar            <#Employe3>;
+    link:PossedePar         <#Client2>;
     sinis:type              "Coups et blessures";
 
 <#Contrat9>
@@ -119,8 +131,8 @@
     car:type                "HABITATION";
     car:cotisation          "600";
     car:indemnites          "20000";
-    link:GerePar            <#Gabrielle>;
-    link:PossedePar         <#Gilbert>;
+    link:GerePar            <#Employe3>;
+    link:PossedePar         <#Client1>;
     sinis:type              "Degats des eaux";
 
     
