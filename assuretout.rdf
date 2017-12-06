@@ -13,7 +13,7 @@
     car:adresse             "78 Avenue Large 21050 Dijon";
     car:dateEmbauche        "1984-11-04";
     car:salaire             "3000";
-    link:EstResponsableDe   <#Contrat1>,<#Contrat3>,<#Contrat6>;
+    link:EstResponsableDe   <#Contrat1>,<#Contrat3>,<#Contrat6>.
 
 <#Employe2>
     rdf:type                type:Employe;
@@ -22,7 +22,7 @@
     car:adresse             "8 Impasse des Rochers 08000 Charleville Mezieres";
     car:dateEmbauche        "1991-07-28";
     car:salaire             "2700";
-    link:EstResponsableDe   <#Contrat2>,<#Contrat4>,<#Contrat5>,<#Contrat7>;
+    link:EstResponsableDe   <#Contrat2>,<#Contrat4>,<#Contrat5>,<#Contrat7>.
 
 <#Employe3>
     rdf:type                type:Employe;
@@ -31,28 +31,28 @@
     car:adresse             "99 Rue de la Fin, 99999 Sens-Interdit";
     car:dateEmbauche        "2017-01-14";
     car:salaire             "2000";
-    link:EstResponsableDe   <#Contrat8>,<#Contrat9>;
+    link:EstResponsableDe   <#Contrat8>,<#Contrat9>.
 
 <#Client1>
     rdf:type                type:Client;
     car:nom                 "Montagne";
     car:prenom              "Gilbert";
     car:adresse             "45 Rue des Pins 06410 Biot";
-    link:BeneficiaireDe     <#Contrat1>,<#Contrat4>,<#Contrat9>;
+    link:BeneficiaireDe     <#Contrat1>,<#Contrat4>,<#Contrat9>.
 
 <#Client2>
     rdf:type                type:Client;
     car:nom                 "Petit";
     car:prenom              "Bernard";
     car:adresse             "52 Boulevard des Templiers 73000 Chambéry";
-    link:BeneficiaireDe     <#Contrat2>,<#Contrat3>,<#Contrat5>,<#Contrat8>;
+    link:BeneficiaireDe     <#Contrat2>,<#Contrat3>,<#Contrat5>,<#Contrat8>.
 
 <#Client3>
     rdf:type                type:Client;
     car:nom                 "de France";
     car:prenom              "Camille";
     car:adresse             "09020 Lieu-Dit la Chambre";
-    link:BeneficiaireDe     <#Contrat6>,<#Contrat7>;
+    link:BeneficiaireDe     <#Contrat6>,<#Contrat7>.
 
 <#Contrat1>
     rdf:type                type:Contrat;
@@ -61,7 +61,7 @@
     car:indemnites          "35000";
     link:GerePar            <#Employe1>;
     link:PossedePar         <#Client1>;
-    sinis:type              "Panne","Bris de glace";
+    sinis:type              "Panne","Bris de glace".
 
 <#Contrat2>
     rdf:type                type:Contrat;
@@ -70,7 +70,7 @@
     car:indemnites          "75000";
     link:GerePar            <#Employe2>;
     link:PossedePar         <#Client2>;
-    sinis:type              "Cambriolage","Incendie";
+    sinis:type              "Cambriolage","Incendie".
 
 <#Contrat3>
     rdf:type                type:Contrat;
@@ -79,7 +79,7 @@
     car:indemnites          "22500";
     link:GerePar            <#Employe1>;
     link:PossedePar         <#Client2>;
-    sinis:type              "Crevaison";
+    sinis:type              "Crevaison".
 
 <#Contrat4>
     rdf:type                type:Contrat;
@@ -88,7 +88,7 @@
     car:indemnites          "145000";
     link:GerePar            <#Employe2>;
     link:PossedePar         <#Client1>;
-    sinis:type              "Mort au travail";
+    sinis:type              "Mort au travail".
 
 <#Contrat5>
     rdf:type                type:Contrat;
@@ -97,7 +97,7 @@
     car:indemnites          "37500";
     link:GerePar            <#Employe2>;
     link:PossedePar         <#Client2>;
-    sinis:type              "Degats des eaux","Electricite";
+    sinis:type              "Degats des eaux","Electricite".
 
 <#Contrat6>
     rdf:type                type:Contrat;
@@ -106,7 +106,7 @@
     car:indemnites          "2850";
     link:GerePar            <#Employe1>;
     link:PossedePar         <#Client3>;
-    sinis:type              "Coups et blessure";
+    sinis:type              "Coups et blessure".
 
 <#Contrat7>
     rdf:type                type:Contrat;
@@ -115,7 +115,7 @@
     car:indemnites          "3900";
     link:GerePar            <#Employe2>;
     link:PossedePar         <#Client3>;
-    sinis:type              "Tout risques";
+    sinis:type              "Tout risques".
 
 <#Contrat8>
     rdf:type                type:Contrat;
@@ -124,7 +124,7 @@
     car:indemnites          "29520";
     link:GerePar            <#Employe3>;
     link:PossedePar         <#Client2>;
-    sinis:type              "Coups et blessures";
+    sinis:type              "Coups et blessures".
 
 <#Contrat9>
     rdf:type                type:Contrat;
@@ -133,6 +133,6 @@
     car:indemnites          "20000";
     link:GerePar            <#Employe3>;
     link:PossedePar         <#Client1>;
-    sinis:type              "Degats des eaux";
+    sinis:type              "Degats des eaux".
 
     
