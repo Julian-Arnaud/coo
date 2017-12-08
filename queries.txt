@@ -1,0 +1,12 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX base:    <http://www.assurance.org/>
+PREFIX type:    <http://www.assurance.org/entity-type/#>
+PREFIX car:     <http://www.assurance.org/entity-caracteristics/#>
+PREFIX link:    <http://www.assurance.org/link/#>
+PREFIX sinis:   <http://www.assurance.org/sinistre/#>
+
+SELECT DISTINCT ?nom 
+WHERE   { 
+            ?x car:nom ?nom
+        }
