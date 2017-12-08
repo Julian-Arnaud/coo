@@ -6,133 +6,131 @@
 @prefix link:   <http://www.assurance.org/link/#> .
 @prefix sinis:  <http://www.assurance.org/sinistre/#> .
 
-<#Employe1>
-    rdf:type                type:Employe;
-    car:nom                 "Pierre";
-    car:prenom              "Paul";
-    car:adresse             "78 Avenue Large 21050 Dijon";
-    car:dateEmbauche        "1984-11-04";
-    car:salaire             "3000";
-    link:EstResponsableDe   <#Contrat1>,<#Contrat3>,<#Contrat6>.
+:Employe1   rdf:type                type:Employe .
+:Employe1   car:nom                 "Pierre" .
+:Employe1   car:prenom              "Paul" .
+:Employe1   car:adresse             "78 Avenue Large 21050 Dijon" .
+:Employe1   car:dateEmbauche        "1984-11-04" .
+:Employe1   car:salaire             "3000" .
+:Employe1   link:EstResponsableDe   :Contrat1 .
+:Employe1   link:EstResponsableDe   :Contrat3 .
+:Employe1   link:EstResponsableDe   :Contrat6 .
 
-<#Employe2>
-    rdf:type                type:Employe;
-    car:nom                 "Martin";
-    car:prenom              "Jacques";
-    car:adresse             "8 Impasse des Rochers 08000 Charleville Mezieres";
-    car:dateEmbauche        "1991-07-28";
-    car:salaire             "2700";
-    link:EstResponsableDe   <#Contrat2>,<#Contrat4>,<#Contrat5>,<#Contrat7>.
+:Employe2   rdf:type                type:Employe .
+:Employe2   car:nom                 "Martin" .
+:Employe2   car:prenom              "Jacques" .
+:Employe2   car:adresse             "8 Impasse des Rochers 08000 Charleville Mezieres" .
+:Employe2   car:dateEmbauche        "1991-07-28" .
+:Employe2   car:salaire             "2700" .
+:Employe2   link:EstResponsableDe   :Contrat2 .
+:Employe2   link:EstResponsableDe   :Contrat4 .
+:Employe2   link:EstResponsableDe   :Contrat5 .
+:Employe2   link:EstResponsableDe   :Contrat7 .
 
-<#Employe3>
-    rdf:type                type:Employe;
-    car:nom                 "Duret";
-    car:prenom              "Gabrielle";
-    car:adresse             "99 Rue de la Fin, 99999 Sens-Interdit";
-    car:dateEmbauche        "2017-01-14";
-    car:salaire             "2000";
-    link:EstResponsableDe   <#Contrat8>,<#Contrat9>.
+:Employe3   rdf:type                type:Employe .
+:Employe3   car:nom                 "Duret" .
+:Employe3   car:prenom              "Gabrielle" .
+:Employe3   car:adresse             "99 Rue de la Fin, 99999 Sens-Interdit" .
+:Employe3   car:dateEmbauche        "2017-01-14" .
+:Employe3   car:salaire             "2000" .
+:Employe3   link:EstResponsableDe   :Contrat8 .
+:Employe3   link:EstResponsableDe   :Contrat9 .
 
-<#Client1>
-    rdf:type                type:Client;
-    car:nom                 "Montagne";
-    car:prenom              "Gilbert";
-    car:adresse             "45 Rue des Pins 06410 Biot";
-    link:BeneficiaireDe     <#Contrat1>,<#Contrat4>,<#Contrat9>.
+:Client1    rdf:type                type:Client .
+:Client1    car:nom                 "Montagne" .
+:Client1    car:prenom              "Gilbert" .
+:Client1    car:adresse             "45 Rue des Pins 06410 Biot" .
+:Client1    link:BeneficiareDe      :Contrat1 .
+:Client1    link:BeneficiareDe      :Contrat4 .
+:Client1    link:BeneficiareDe      :Contrat9 .
 
-<#Client2>
-    rdf:type                type:Client;
-    car:nom                 "Petit";
-    car:prenom              "Bernard";
-    car:adresse             "52 Boulevard des Templiers 73000 Chambéry";
-    link:BeneficiaireDe     <#Contrat2>,<#Contrat3>,<#Contrat5>,<#Contrat8>.
+:Client2    rdf:type                type:Client .
+:Client2    car:nom                 "Petit" .
+:Client2    car:prenom              "Bernard" .
+:Client2    car:adresse             "52 Boulevard des Templiers 73000 Chamb\u00E9ry" .
+:Client2    link:BeneficiareDe      :Contrat2 .
+:Client2    link:BeneficiareDe      :Contrat3 .
+:Client2    link:BeneficiareDe      :Contrat5 .
+:Client2    link:BeneficiareDe      :Contrat8 .
 
-<#Client3>
-    rdf:type                type:Client;
-    car:nom                 "de France";
-    car:prenom              "Camille";
-    car:adresse             "09020 Lieu-Dit la Chambre";
-    link:BeneficiaireDe     <#Contrat6>,<#Contrat7>.
+:Client3    rdf:type                type:Client .
+:Client3    car:nom                 "de France" .
+:Client3    car:prenom              "Camille" .
+:Client3    car:adresse             "09020 Lieu-Dit la Chambre" .
+:Client3    link:BeneficiareDe      :Contrat6 .
+:Client3    link:BeneficiareDe      :Contrat7 .
 
-<#Contrat1>
-    rdf:type                type:Contrat;
-    car:type                "AUTO";
-    car:cotisation          "2000";
-    car:indemnites          "35000";
-    link:GerePar            <#Employe1>;
-    link:PossedePar         <#Client1>;
-    sinis:type              "Panne","Bris de glace".
+:Contrat1   rdf:type                type:Contrat .
+:Contrat1   car:type                "AUTO" .
+:Contrat1   car:cotisation          "2000" .
+:Contrat1   car:indemnites          "35000" .
+:Contrat1   link:GerePar            :Employe1 .
+:Contrat1   link:PossedePar         :Client1 .
+:Contrat1   sinis:type              "Bris de glace" .
+:Contrat1   sinis:type              "Panne" .
 
-<#Contrat2>
-    rdf:type                type:Contrat;
-    car:type                "HABITATION";
-    car:cotisation          "2600";
-    car:indemnites          "75000";
-    link:GerePar            <#Employe2>;
-    link:PossedePar         <#Client2>;
-    sinis:type              "Cambriolage","Incendie".
+:Contrat2   rdf:type                type:Contrat .
+:Contrat2   car:type                "HABITATION" .
+:Contrat2   car:cotisation          "2600" .
+:Contrat2   car:indemnites          "75000" .
+:Contrat2   link:GerePar            :Employe2 .
+:Contrat2   link:PossedePar         :Client2 .
+:Contrat2   sinis:type              "Cambriolage" .
+:Contrat2   sinis:type              "Incendie" .
 
-<#Contrat3>
-    rdf:type                type:Contrat;
-    car:type                "AUTO";
-    car:cotisation          "800";
-    car:indemnites          "22500";
-    link:GerePar            <#Employe1>;
-    link:PossedePar         <#Client2>;
-    sinis:type              "Crevaison".
+:Contrat3   rdf:type                type:Contrat .
+:Contrat3   car:type                "AUTO" .
+:Contrat3   car:cotisation          "800" .
+:Contrat3   car:indemnites          "22500" .
+:Contrat3   link:GerePar            :Employe1 .
+:Contrat3   link:PossedePar         :Client2 .
+:Contrat3   sinis:type              "Crevaison" .
 
-<#Contrat4>
-    rdf:type                type:Contrat;
-    car:type                "DECES";
-    car:cotisation          "4300";
-    car:indemnites          "145000";
-    link:GerePar            <#Employe2>;
-    link:PossedePar         <#Client1>;
-    sinis:type              "Mort au travail".
+:Contrat4   rdf:type                type:Contrat .
+:Contrat4   car:type                "DECES" .
+:Contrat4   car:cotisation          "4300" .
+:Contrat4   car:indemnites          "145000" .
+:Contrat4   link:GerePar            :Employe2 .
+:Contrat4   link:PossedePar         :Client1 .
+:Contrat4   sinis:type              "Mort au travail" .
 
-<#Contrat5>
-    rdf:type                type:Contrat;
-    car:type                "HABITATION";
-    car:cotisation          "1200";
-    car:indemnites          "37500";
-    link:GerePar            <#Employe2>;
-    link:PossedePar         <#Client2>;
-    sinis:type              "Degats des eaux","Electricite".
+:Contrat5   rdf:type                type:Contrat .
+:Contrat5   car:type                "HABITATION" .
+:Contrat5   car:cotisation          "1200" .
+:Contrat5   car:indemnites          "37500" .
+:Contrat5   link:GerePar            :Employe2 .
+:Contrat5   link:PossedePar         :Client2 .
+:Contrat5   sinis:type              "Degats des eaux" .
+:Contrat5   sinis:type              "Electricite" .
 
-<#Contrat6>
-    rdf:type                type:Contrat;
-    car:type                "RESPONSABILITE CIVILE";
-    car:cotisation          "850";
-    car:indemnites          "2850";
-    link:GerePar            <#Employe1>;
-    link:PossedePar         <#Client3>;
-    sinis:type              "Coups et blessure".
+:Contrat6   rdf:type                type:Contrat .
+:Contrat6   car:type                "RESPONSABILITE CIVILE" .
+:Contrat6   car:cotisation          "850" .
+:Contrat6   car:indemnites          "2850" .
+:Contrat6   link:GerePar            :Employe1 .
+:Contrat6   link:PossedePar         :Client3 .
+:Contrat6   sinis:type              "Coups et blessure" .
 
-<#Contrat7>
-    rdf:type                type:Contrat;
-    car:type                "AUTO";
-    car:cotisation          "1300";
-    car:indemnites          "3900";
-    link:GerePar            <#Employe2>;
-    link:PossedePar         <#Client3>;
-    sinis:type              "Tout risques".
+:Contrat7   rdf:type                type:Contrat .
+:Contrat7   car:type                "AUTO" .
+:Contrat7   car:cotisation          "1300" .
+:Contrat7   car:indemnites          "3900" .
+:Contrat7   link:GerePar            :Employe2 .
+:Contrat7   link:PossedePar         :Client3 .
+:Contrat7   sinis:type              "Tout risques" .
 
-<#Contrat8>
-    rdf:type                type:Contrat;
-    car:type                "RESPONSABILITE CIVILE";
-    car:cotisation          "1000";
-    car:indemnites          "29520";
-    link:GerePar            <#Employe3>;
-    link:PossedePar         <#Client2>;
-    sinis:type              "Coups et blessures".
+:Contrat8   rdf:type                type:Contrat .
+:Contrat8   car:type                "RESPONSABILITE CIVILE" .
+:Contrat8   car:cotisation          "1000" .
+:Contrat8   car:indemnites          "29520" .
+:Contrat8   link:GerePar            :Employe3 .
+:Contrat8   link:PossedePar         :Client2 .
+:Contrat8   sinis:type              "Coups et blessures" .
 
-<#Contrat9>
-    rdf:type                type:Contrat;
-    car:type                "HABITATION";
-    car:cotisation          "600";
-    car:indemnites          "20000";
-    link:GerePar            <#Employe3>;
-    link:PossedePar         <#Client1>;
-    sinis:type              "Degats des eaux".
-
-    
+:Contrat9   rdf:type                type:Contrat .
+:Contrat9   car:type                "HABITATION" .
+:Contrat9   car:cotisation          "600" .
+:Contrat9   car:indemnites          "20000" .
+:Contrat9   link:GerePar            :Employe3 .
+:Contrat9   link:PossedePar         :Client1 .
+:Contrat9   sinis:type              "Degats des eaux" .
