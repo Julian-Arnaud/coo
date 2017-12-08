@@ -4,7 +4,7 @@
 @prefix type:   <http://www.assurance.org/entity-type/#> .
 @prefix car:    <http://www.assurance.org/entity-caracteristics/#> .
 @prefix link:   <http://www.assurance.org/link/#> .
-@prefix sinis:  <htpp://www.assurance.org/sinistre/#> .
+@prefix sinis:  <http://www.assurance.org/sinistre/#> .
 
 <#Employe1>
     rdf:type                type:Employe;
